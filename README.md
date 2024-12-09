@@ -39,4 +39,4 @@ This project is an Inventory Management System that manages products, suppliers,
    ./inventory_system
    ```
 
-[Here the video of output](./smaple_video.mp4)
+[Here the video of output](https://drive.google.com/file/d/1EQP5Pr8XbUNkH6wr7eJaV-rdhbzb8OFA/view?usp=sharing)
