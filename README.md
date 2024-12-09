@@ -6,8 +6,8 @@ This project is an Inventory Management System that manages products, suppliers,
 
 - **Products**: Manage product details like name, category, price, stock level, and reorder threshold.
 - **Suppliers**: Two types of suppliers are supported:
-  - **Local Supplier**: Handles "Electronics" products with immediate restocking capability.
-  - **Global Supplier**: Handles non-electronic products with slower restocking processes.
+  - **Local Supplier**
+  - **Global Supplier**
 - **Notifications**: Notify suppliers when stock levels are low.
 - **Sales**: Sell products and update stock levels dynamically.
 - **Inventory Check**: View current inventory and low-stock alerts.
@@ -26,9 +26,15 @@ This project is an Inventory Management System that manages products, suppliers,
 
 ## Instructions to Run the System
 
-1. Clone or download the project files to your local system.
+1. Clone or download the project files to your local system using command below.
+   ```
+    git clone  git@github.com:boharabirendra/InventoryMangSysWithNotiSys.git
+   ```
 2. Open a terminal and navigate to the project folder.
-3. Compile the code using the following command:
-   ```bash
+3. Compile and run the code using the following command:
+
+   ```
    g++ -o inventory_system main.cpp
+
+   ./inventory_system
    ```
