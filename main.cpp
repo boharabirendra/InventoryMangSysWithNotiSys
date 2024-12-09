@@ -203,6 +203,9 @@ public:
     {
         if (product->needsRestocking())
         {
+            /**
+             * For demo purpose restocking quantity is as same as of sold quantity
+             */
             int quantityToRestock = product->getReorderThreshold() * 2 - product->getStockLevel();
 
             cout << endl
