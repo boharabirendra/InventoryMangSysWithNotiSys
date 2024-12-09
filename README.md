@@ -38,3 +38,5 @@ This project is an Inventory Management System that manages products, suppliers,
 
    ./inventory_system
    ```
+
+[Here the video of output](./smaple_video.mp4)

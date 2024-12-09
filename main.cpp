@@ -147,7 +147,9 @@ public:
     void displayInventory() const
     {
         cout << endl
-             << "Current Inventory" << endl;
+             << " ----------------" << endl;
+        cout
+            << "Current Inventory" << endl;
         cout << " ----------------" << endl;
         cout << left
              << setw(10) << "ID"
@@ -204,7 +206,8 @@ public:
             int quantityToRestock = product->getReorderThreshold() * 2 - product->getStockLevel();
 
             cout << endl
-                 << "Targeted Restock Notification " << endl;
+                 << "-----------------------------" << endl;
+            cout << "Targeted Restock Notification " << endl;
             cout << "-----------------------------" << endl;
             cout << "Low stock alert for: " << product->getProductName()
                  << " (ID: " << product->getProductID() << ")" << endl;
@@ -279,24 +282,29 @@ public:
 
 void displaySupplierMenu()
 {
+    cout << endl
+         << "------------------" << endl;
     cout << "Supplier Selection" << endl;
     cout << "------------------" << endl;
     cout << "1. Local Supplier " << endl;
     cout << "2. Global Supplier" << endl;
     cout << "3. Exit" << endl;
-    cout << "Enter your choice: ";
+    cout << endl
+         << "Enter your choice: ";
 }
 
 void displayProductMenu()
 {
     cout << endl
-         << "Product Menu" << endl;
+         << "------------" << endl;
+    cout << "Product Menu" << endl;
     cout << "------------" << endl;
     cout << "1. View Assigned Products" << endl;
     cout << "2. Sell Product" << endl;
     cout << "3. Check Inventory Status" << endl;
     cout << "4. Return to Supplier Menu" << endl;
-    cout << "Enter your choice: ";
+    cout << endl
+         << "Enter your choice: ";
 }
 
 int main()
@@ -343,8 +351,8 @@ int main()
             currentSupplier = &globalSupplier;
             break;
         default:
-            cout << "Invalid choice. Try again." << endl;
-            continue;
+            cout << "Invalid choice" << endl;
+            break;
         }
 
         while (true)
@@ -364,7 +372,8 @@ int main()
                 int productId, quantity;
                 organization.displayProductsForSupplier(currentSupplier);
 
-                cout << "Enter Product ID to sell: ";
+                cout << endl
+                     << "Enter Product ID to sell: ";
                 cin >> productId;
 
                 Product *product = organization.findProductByID(productId);
@@ -388,7 +397,8 @@ int main()
 
                         product->updateStockLevel(quantity);
 
-                        cout << "Sale successful! Remaining stock: "
+                        cout << endl
+                             << "Sale successful! Remaining stock: "
                              << product->getStockLevel() << endl;
 
                         if (product->needsRestocking())
@@ -415,7 +425,8 @@ int main()
             case 4:
                 goto supplierMenuLabel;
             default:
-                cout << "Invalid choice. Try again." << endl;
+                cout << "Invalid choice" << endl;
+                break;
             }
         }
     supplierMenuLabel:;
